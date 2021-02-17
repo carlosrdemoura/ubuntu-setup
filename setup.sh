@@ -47,6 +47,21 @@ install_chrome() {
   check
 }
 
+install_vscode() {
+  step "Installing VS Code"
+
+  if exists code; then
+    warning "VS Code is already installed, skipping install"
+  else
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EB3E94ADBE1229CF
+    sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    sudo apt update
+    sudo apt -y install code
+  fi
+
+  check
+}
+
 install_docker() {
   step "Installing Docker"
 
@@ -112,6 +127,7 @@ setup() {
   check
 
   install_chrome
+  install_vscode
   install_docker
   install_docker_compose
   install_nodejs
