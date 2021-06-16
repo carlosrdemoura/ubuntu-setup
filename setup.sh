@@ -143,10 +143,6 @@ setup() {
   git config --global tag.sort -version:refname
   check
 
-  step "Creating projects folder"
-  mkdir -p ~/projects/carlos/
-  check
-
   echo "\nFinished!"
 }
 
