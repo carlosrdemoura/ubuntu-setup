@@ -2,5 +2,5 @@
 shell script to setup my ubuntu
 
 ```sh
-$ sh -c "$(wget -q -O - https://setup.verzola.net)"
+$ sh -c "$(wget -q -O - https://raw.githubusercontent.com/carlosrdemoura/ubuntu-setup/main/setup.sh)"
 ```
