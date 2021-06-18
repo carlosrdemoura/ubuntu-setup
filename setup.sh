@@ -122,10 +122,6 @@ setup() {
     build-essential
   check
 
-  step "Cleaning APT packages"
-  sudo apt autoremove -y
-  check
-
   install_chrome
   install_vscode
   install_docker
